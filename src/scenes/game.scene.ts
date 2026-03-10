@@ -15,5 +15,10 @@ export class GameScene extends Scene {
         this.achoThePup.setCollideWorldBounds(true);
         this.achoThePup.setBounce(1, 1);
         this.achoThePup.setVelocityX(300);
+        this.achoThePup.setInteractive();
+
+        this.achoThePup.on('pointerdown', () => {
+            this.sound.play('maullido');
+        });
     }
 }
